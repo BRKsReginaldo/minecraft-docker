@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+docker run -d -it --name mcpe \
+      -v $(pwd)/config:/data \
+      -p 19132:19132/udp lomot/minecraft-bedrock:1.10.0.7-r1
+
+sudo chown $USER:$USER -R $(pwd)/config
